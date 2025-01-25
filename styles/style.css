@@ -113,7 +113,7 @@ section {
   gap: 10px;
 }
 .banner-button:hover {
-  background-color: brown;
+  background-color: orangered;
 }
 .banner-img-container {
   width: 440px;

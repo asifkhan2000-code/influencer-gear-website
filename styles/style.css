@@ -31,6 +31,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+section {
+  padding-top: 80px;
+}
 .display-flex {
   display: flex;
 }
@@ -53,15 +56,18 @@
 /*  */
 /*  */
 /* navbar and banner section styles */
-.navbar {
+.navbar,
+.banner {
   max-width: 1200px;
   margin: 0 auto;
+}
+.navbar {
   margin-top: 60px;
   align-items: center;
   justify-content: space-between;
 }
 .nav-title {
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-weight: 700;
 }
 .nav-links {
@@ -75,20 +81,82 @@
   font-size: 1vw;
   font-weight: 600;
 }
+.banner {
+  align-items: center;
+  gap: 130px;
+}
+.banner-content {
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+.banner-title {
+  font-size: 3.25vw;
+  font-weight: 700;
+  line-height: 4.44vw;
+}
+.banner-description {
+  font-size: 1vw;
+  font-weight: 600;
+}
+.banner-button {
+  background-color: #e02c6d;
+  font-size: 1vw;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 40px;
+  padding: 10px 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.banner-button:hover {
+  background-color: brown;
+}
+.banner-img-container {
+  width: 440px;
+  height: 414px;
+  background-image: url("../images/Circle\ design.svg");
+  background-size: cover;
+}
+.banner-img-container img {
+  width: 100%;
+  height: 100%;
+}
 
 @media screen and (max-width: 576px) {
-    .icon-menubar {
-        display: block;
-    }
-    .nav-items, .icon-search {
-        display: none;
-    }   
-    .navbar {
-        max-width: 400px;
-        margin: 0 auto;
-        margin-top: 30px;
-    }
-    .nav-title {
-        font-size: 2.5vw;
-    } 
+  .icon-menubar {
+    display: block;
+  }
+  .nav-items,
+  .icon-search {
+    display: none;
+  }
+  .navbar {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .nav-title {
+    font-size: 4vw;
+  }
+  .banner {
+    max-width: 400px;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .banner-content {
+    text-align: center;
+    align-items: center;
+  }
+  .banner-title {
+    font-size: 5vw;
+    line-height: 7vw;
+  }
+  .banner-description {
+    font-size: 3vw;
+  }
 }
